@@ -6,7 +6,7 @@ day_dict = {}
 if my_number <= 0 or my_number >= 8640000:
     print('You entered the wrong number. Try again')
 
-if my_number >= 0 and my_number < 8640000:
+elif my_number >= 0 and my_number < 8640000:
 
     for divider in range(3):
         result = divmod(my_number, divider_list[divider])
