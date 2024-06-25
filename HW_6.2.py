@@ -1,5 +1,5 @@
 my_number = 0
-divider_list = [86400, 3600, 60]
+divider_list = (86400, 3600, 60)
 my_list = []
 day_dict = {}
 
