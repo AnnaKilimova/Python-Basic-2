@@ -1,4 +1,4 @@
-my_number = 0
+my_number = int(input('Enter a number from 0 and to 8640000: '))
 divider_list = (86400, 3600, 60)
 my_list = []
 day_dict = {}
@@ -22,7 +22,7 @@ elif my_list[0][1] == '1':
     day_dict[my_list[0]] = 'день'
 
 for key, value in day_dict.items():
-   print(f'{int(key)} {value}, {my_list[1]}:{my_list[2]}:{my_list[3]}' )
+   print(f'{int(key)} {value}, {my_list[1]}:{my_list[2]}:{my_list[3]}')
 
 
 
