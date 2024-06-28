@@ -29,7 +29,7 @@ assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
 #         if element % 5 == 0:
 #             my_set2.add(element)
 #
-#     return my_set1 & my_set2
+#     return my_set1.intersection(my_set2)
 #
 # assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
 
