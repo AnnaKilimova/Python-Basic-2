@@ -5,7 +5,7 @@ def some_gen(begin, end, func):
     for _ in range(end):
         yield begin
 
-        begin = pow(begin)
+        begin = func(begin)
 
 gen = some_gen(2, 4, pow)
 assert isgenerator(gen) == True, 'Test1'
