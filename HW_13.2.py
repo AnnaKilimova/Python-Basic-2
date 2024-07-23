@@ -3,18 +3,26 @@ class Counter:
         self.current = current
         self.min_value = min_value
         self.max_value = max_value
+
     def set_current(self, start):
         self.current = start
+
     def set_max(self, max_max):
         self.max_value = max_max
+
     def set_min(self, min_min):
         self.min_value = min_min
+
     def step_up(self):
-        if self.current != self.max_value:
-            self.current += 1
+        if self.current == self.max_value:
+            raise ValueError('The maximum value has been reached')
+        self.current += 1
+
     def step_down(self):
-        if self.current != self.min_value:
-            self.current -= 1
+        if self.current == self.min_value:
+            raise ValueError('The minimum value has been reached')
+        self.current -= 1
+
     def get_current(self):
         return self.current
 
