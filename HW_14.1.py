@@ -19,6 +19,7 @@ class AddingStudentException(Exception):
     def __init__(self, message="Can not add more than 10 students"):
         self.message = message
         super().__init__(self.message)
+
 class Group:
     def __init__(self, number):
         self.number = number
