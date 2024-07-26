@@ -78,9 +78,9 @@ try:
     gr.add_student(st8)
     gr.add_student(st9)
     gr.add_student(st10)
-    gr.add_student(st11) # ValueError
+    gr.add_student(st11)
 except AddingStudentException as e:
-    print(e) # Достигнут максимум
+    print(e)
 
 print(gr)
 assert str(gr.find_student('Jobs')) == str(st1), 'Test1'
