@@ -15,6 +15,7 @@ class Student(Human):
 
     def __str__(self):
         return f'{self.gender} {self.age} {self.first_name} {self.last_name} {self.record_book}'
+
 class AddingStudentException(Exception):
     def __init__(self, message="Can not add more than 10 students"):
         self.message = message
