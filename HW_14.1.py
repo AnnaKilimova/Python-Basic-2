@@ -15,16 +15,18 @@ class Student(Human):
 
     def __str__(self):
         return f'{self.gender} {self.age} {self.first_name} {self.last_name} {self.record_book}'
-
+class AddingStudentException(Exception):
+    def __init__(self, message="Can not add more than 10 students"):
+        self.message = message
+        super().__init__(self.message)
 class Group:
     def __init__(self, number):
         self.number = number
         self.group = set()
 
     def add_student(self, student):
-        if len(self.group) == 10:
-            raise ValueError('User exception')
-
+        if len(self.group) >= 10:
+            raise AddingStudentException()
         self.group.add(student)
 
     def delete_student(self, last_name):
@@ -75,7 +77,7 @@ try:
     gr.add_student(st9)
     gr.add_student(st10)
     gr.add_student(st11) # ValueError
-except ValueError as e:
+except AddingStudentException as e:
     print(e) # Достигнут максимум
 
 print(gr)
