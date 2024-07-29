@@ -1,4 +1,5 @@
 import math
+
 class Rectangle:
 
     def __init__(self, width, height):
@@ -16,7 +17,6 @@ class Rectangle:
         new_width = math.sqrt(new_square)
         new_height = new_square / new_width
         return new_width, new_height
-
 
     def __add__(self, other):
         if isinstance(other, Rectangle):
